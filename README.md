@@ -74,3 +74,11 @@ We used available Blue Jay sequencing data from NCBI databases and aligned these
 | KY492659.1 | 1214941675 | 505         | TGFB2, intron 5                         |
 | KY495265.1 | 1214941736 | 732         | fibrinogen, intron 7                    |
 
+
+
+## Steller's Jay (*Cyanocitta stelleri*)
+We used a Steller's Jay genome assembly (GCA_026167965.1)
+
+### Steller's Jay Mitochondria
+
+### Steller's Jay Autosomes
