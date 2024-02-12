@@ -23,7 +23,7 @@ We used available Blue Jay sequencing data from NCBI databases and aligned these
 
 ### Blue Jay Mitochondria
 
-| **GenBank**    | **GI**         | **Length** | **Gene**                 |
+| **GenBank**    | **GI**         | **Length (bp)** | **Gene**                 |
 |------------|------------|--------|----------------------|
 | AF197832.1 | 6469720    | 1020   | MT-CO1               |
 | AF218921.1 | 6979773    | 1293   | GB072 Control Region |
@@ -58,5 +58,19 @@ We used available Blue Jay sequencing data from NCBI databases and aligned these
 
 ### Blue Jay Autosomes
 
-
+| GenBank    | GI         | Length (bp) | Gene                                    |
+|------------|------------|-------------|-----------------------------------------|
+| AY082422.1 | 28916038   | 852         | beta-fibrinogen, intron 7               |
+| AY395603.1 | 39979941   | 891         | fibrinogen, intron 7                    |
+| AY443137.1 | 38324817   | 1152        | RAG2                                    |
+| AY443280.1 | 38324377   | 2872        | RAG1                                    |
+| DQ320585.1 | 85822649   | 559         | beta-fibrinogen, intron 5               |
+| DQ912621.1 | 114214869  | 507         | AK1, intron 5                           |
+| DQ912641.1 | 114214889  | 853         | beta-fibrinogen, intron 7               |
+| FJ598306.1 | 224593463  | 592         | TGFB2, intron 5                         |
+| HM623931.1 | 339773338  | 74          | short-wavelength-sensitive 1 opsin TRM2 |
+| HQ391560.1 | 319739720  | 620         | CHD1Z                                   |
+| KY492640.1 | 1214941656 | 670         | myoglobin, intron 2                     |
+| KY492659.1 | 1214941675 | 505         | TGFB2, intron 5                         |
+| KY495265.1 | 1214941736 | 732         | fibrinogen, intron 7                    |
 
