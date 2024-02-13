@@ -2,12 +2,13 @@
 
 Coding notes used to determine paternal ancestry of putative Green Jay x Blue Jay indidual. 
 
-## Determine Mitochondrial Ancestry
-Mitochondrial ancestry determines the maternal ancestry of the individual. During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
+## Determine Genetic Ancestry
+During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
 + Green Jay (*Cyanocorax yncas*)
 + Blue Jay (*Cyanocitta cristata*)
 + Steller's Jay (*Cyanocitta stelleri*)
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
++ Eurasian Magpie (*Pica Pica*) \*\**OUTGROUP**
 
 Each subsection describes how representative sequences were made for each jay species.
 
