@@ -10,11 +10,26 @@ During analysis we considered all possible sources of ancestry within potential 
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
-Each subsection describes how representative sequences were made for each jay species. We use the below code to create all conda environments used in this workflow:
+Each subsection describes how representative sequences were made for each jay species. 
+
+
+I use conda to manage my working environments as some of the programs do no play nice together, below is how I make each of the environemts used in the workflow with version specific downloads.
+
+**Conda Env: alignment**
+```
+conda create --name alignment
+conda activate alignment
 
 ```
-CONDA!!!!!!!!!!!!!!!!!!!
+
+**Conda Env: bcftools**
 ```
+conda create --name bcftools
+conda activate bcftools
+
+```
+
+
 
 ## Blue Jay (*Cyanocitta cristata*)
 All databases are limited by what is avaialable on NCBI for Blue Jay, potential sequences are listed in the subsections below.
