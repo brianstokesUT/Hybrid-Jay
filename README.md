@@ -8,14 +8,19 @@ During analysis we considered all possible sources of ancestry within potential 
 + Blue Jay (*Cyanocitta cristata*)
 + Steller's Jay (*Cyanocitta stelleri*)
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
-+ Eurasian Magpie (*Pica Pica*) **OUTGROUP**
++ Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
 Each subsection describes how representative sequences were made for each jay species.
 
 ## Green Jay (*Cyanocorax yncas*)
-We used WGS data from 7 Green Jay samples captured throughout Texas. Samples were sequenced - PE, 150bp, 10x coverage. We aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
+We used WGS data from 7 Green Jay samples captured throughout Texas. Samples were sequenced using PE, 150bp, 10x coverage. We aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
 
 ### Green Jay Mitochondria
+
+***
+this is code text?
+***
+
 
 ### Green Jay Autosomes
 
