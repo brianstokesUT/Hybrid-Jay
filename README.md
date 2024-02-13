@@ -10,22 +10,14 @@ During analysis we considered all possible sources of ancestry within potential 
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
-Each subsection describes how representative sequences were made for each jay species.
+Each subsection describes how representative sequences were made for each jay species. We use the below code to create all conda environments used in this workflow:
 
-## Green Jay (*Cyanocorax yncas*)
-We used WGS data from 7 Green Jay samples captured throughout Texas. Samples were sequenced using PE, 150bp, 10x coverage. We aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
-
-### Green Jay Mitochondria
-
-'''
-  this is code text?
-'''
-
-
-### Green Jay Autosomes
+```
+CONDA!!!!!!!!!!!!!!!!!!!
+```
 
 ## Blue Jay (*Cyanocitta cristata*)
-We used available Blue Jay sequencing data from NCBI databases and aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
+All databases are limited by what is avaialable on NCBI for Blue Jay, potential sequences are listed in the subsections below.
 
 ### Blue Jay Mitochondria
 
@@ -62,6 +54,50 @@ We used available Blue Jay sequencing data from NCBI databases and aligned these
 | OQ048151.1 | 2445584286 | 1378   | MT-ND4               |
 | X74258.1   | 396719     | 1143   | MT-CYB               |
 
+Because mitochondria have fairly low levels of intraspecific variation (at least compared to interspecific variation) we will create a consensus Blue Jay mitochondrial sequence based on the available Steller's Jay refernece genome which has a high quality mitochondrial scaffold.
+1. Download all the sequences listed in the table above from NCBI using prefered method.
+2. Align Blue Jay MT sequences to the Steller's Jay refernce MT scaffold.
+
+``` 
+conda activate alignment
+
+#make stellars jay mt index for bowtie
+cd /scratch/08209/brian97/hybrid/mt_raw/cya_ste$
+bowtie2-build -f JANXIP010000352.1.fasta JANXIP010000352.1
+#make faidx index for bcftools mpileup
+samtools faidx JANXIP010000352.1.fasta
+
+#align bljay to stellar's ref
+cd /scratch/08209/brian97/hybrid/mt_raw/cya_cri
+(USING SENSITIVE BC I KNOW THESE ALIGN SOMEWHERE)
+###bowtie2 --very-sensitive -x /scratch/08209/brian97/hybrid/mt_raw/cya_ste/JANXIP010000352.1 -U cc_ncbi.fq | samtools view -bS > cya_cri.bam###
+#found out can't use the fq bc it brings in the super weird low phred scores!!!
+bowtie2 --very-sensitive-local -x /scratch/08209/brian97/hybrid/mt_raw/cya_ste/JANXIP010000352.1 -f -U cc_ncbi.fasta | samtools view -bS > cya_cri.bam
+```
+3. Take a quick look at the quality and mapping depth of the resultant alignment.
+```
+samtools sort cya_cri.bam -o sort_cya_cri.bam
+samtools index sort_cya_cri.bam 
+
+samtools depth -a sort_cya_cri.bam > depth.txt
+
+###Produce quick quality report of the alignments so we have the stats for paper
+conda deactivate
+conda activate qualimap
+qualimap bamqc -bam sort_cya_cri.bam -outdir qualimap_results
+###75.04% of the ref mt genome is covered by at least one mapped basepair
+```
+4. Call variants and create a consensus sequence
+```
+#lets make variant calls, don't need any quality filter because these are NCBI and should all be high quality?
+conda deactivate
+conda activate bcftools
+
+bcftools mpileup -Ou -f /scratch/08209/brian97/hybrid/mt_raw/cya_ste/JANXIP010000352.1.fasta sort_cya_cri.bam | bcftools call -Ou -mv | bcftools norm -f /scratch/08209/brian97/hybrid/mt_raw/cya_ste/JANXIP010000352.1.fasta -Oz -o cyacri_MT.vcf.gz
+bcftools index cyacri_MT.vcf.gz
+bcftools consensus -f /scratch/08209/brian97/hybrid/mt_raw/cya_ste/JANXIP010000352.1.fasta cyacri_MT.vcf.gz > cyacri_mt_con1.fasta
+```
+
 ### Blue Jay Autosomes
 
 | GenBank    | GI         | Length (bp) | Gene                                    |
@@ -82,9 +118,55 @@ We used available Blue Jay sequencing data from NCBI databases and aligned these
 
 
 
+
+
+
+
+
+
+
+## Green Jay (*Cyanocorax yncas*)
+We used WGS data from 7 Green Jay samples captured throughout Texas. Samples were sequenced using PE, 150bp, 10x coverage. We aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
+
+### Green Jay Mitochondria
+
+'''
+  this is code text?
+'''
+
+
+### Green Jay Autosomes
+
+##########Create GRJA RAG1 gene fasta
+
+```
+#call variants at the RAG1 gene
+bcftools mpileup -Ou -q 20 -r JANXIP010000005.1:37834112-37836993 -f /scratch/08209/brian97/hybrid/mt_raw/grja_mt_prep/stja_ref/GCA_026167965.1_bCyaSte1.0.p_genomic.fna sort.2000.bam sort.2001.bam sort.2002.bam sort.2003.bam sort.2004.bam sort.2005.bam | bcftools call -Ou -mv | bcftools norm -f /scratch/08209/brian97/hybrid/mt_raw/grja_mt_prep/stja_ref/GCA_026167965.1_bCyaSte1.0.p_genomic.fna -Oz -o /scratch/08209/brian97/hybrid/autosomes/homolog/grja_s5_rag1.vcf.gz
+bcftools index /scratch/08209/brian97/hybrid/autosomes/homolog/grja_s5_rag1.vcf.gz
+
+#create conesnsus, for just the well covered RAG1 gene region
+samtools faidx /scratch/08209/brian97/hybrid/mt_raw/grja_mt_prep/stja_ref/GCA_026167965.1_bCyaSte1.0.p_genomic.fna JANXIP010000005.1:37834112-37836993 | bcftools consensus /scratch/08209/brian97/hybrid/autosomes/homolog/grja_s5_rag1.vcf.gz > /scratch/08209/brian97/hybrid/autosomes/homolog/grja_s5_rag1.fasta
+```
+
+
+
+
+
+
 ## Steller's Jay (*Cyanocitta stelleri*)
 We used a Steller's Jay genome assembly (GCA_026167965.1)
 
 ### Steller's Jay Mitochondria
 
 ### Steller's Jay Autosomes
+RAG1:
+```
+
+
+
+
+```
+
+
+
+
