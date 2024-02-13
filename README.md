@@ -8,7 +8,7 @@ During analysis we considered all possible sources of ancestry within potential 
 + Blue Jay (*Cyanocitta cristata*)
 + Steller's Jay (*Cyanocitta stelleri*)
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
-+ Eurasian Magpie (*Pica Pica*) \*\**OUTGROUP**
++ Eurasian Magpie (*Pica Pica*) \*\ **OUTGROUP**
 
 Each subsection describes how representative sequences were made for each jay species.
 
