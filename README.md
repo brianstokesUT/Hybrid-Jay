@@ -17,9 +17,9 @@ We used WGS data from 7 Green Jay samples captured throughout Texas. Samples wer
 
 ### Green Jay Mitochondria
 
-***
+'''
 this is code text?
-***
+'''
 
 
 ### Green Jay Autosomes
