@@ -5,8 +5,18 @@
 ## Summary
 We found a putative hybrid Green Jay x Blue Jay individual in central Texas during Summer 2023. *ADD MORE DETAILS HERE*
 
+This repository describes how we obtained all results and figures related to the publication.
+
 ## Data Generation
-Raw fastq files can be found *HERE*.
+Raw fastq files of the putative hybrid invividual can be found *HERE*.
+
+### Possible Parents
+During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
++ Green Jay (*Cyanocorax yncas*)
++ Blue Jay (*Cyanocitta cristata*)
++ Steller's Jay (*Cyanocitta stelleri*)
++ Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
++ Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
 ## Determine Genetic Ancestry
 During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
