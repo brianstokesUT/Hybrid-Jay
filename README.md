@@ -18,14 +18,6 @@ During analysis we considered all possible sources of ancestry within potential 
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
-## Determine Genetic Ancestry
-During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
-+ Green Jay (*Cyanocorax yncas*)
-+ Blue Jay (*Cyanocitta cristata*)
-+ Steller's Jay (*Cyanocitta stelleri*)
-+ Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
-+ Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
-
 Each subsection describes how representative sequences were made for each jay species. 
 
 
@@ -47,7 +39,7 @@ conda activate bcftools
 
 
 
-## Blue Jay (*Cyanocitta cristata*)
+# Blue Jay (*Cyanocitta cristata*)
 All databases are limited by what is avaialable on NCBI for Blue Jay, potential sequences are listed in the subsections below.
 
 ### Blue Jay Mitochondria
