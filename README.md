@@ -7,7 +7,7 @@ We found a putative hybrid Green Jay x Blue Jay individual in central Texas duri
 
 This repository is split into two major sections. Firstly we describe how we determined genetic ancestry. Second we describe the generation of species range maps. 
 
-# Genetic Methods
+# Genomic Methods
 ## Data Generation
 Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found *HERE*.
 
