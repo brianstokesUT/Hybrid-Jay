@@ -1,6 +1,12 @@
 # Hybrid-Jay
 
-Coding notes used to determine paternal ancestry of putative Green Jay x Blue Jay indidual. 
+*CITATION HERE*
+
+##Summary
+We found a putative hybrid Green Jay x Blue Jay individual in central Texas during Summer 2023. *ADD MORE DETAILS HERE*
+
+##Data Generation
+Raw fastq files can be found *HERE*. 
 
 ## Determine Genetic Ancestry
 During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
