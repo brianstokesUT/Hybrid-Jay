@@ -1,12 +1,12 @@
-# Hybrid-Jay
+# Hybrid-Jay (*REPLACE WITH PUBLICATION NAME*)
 
 *CITATION HERE*
 
-##Summary
+## Summary
 We found a putative hybrid Green Jay x Blue Jay individual in central Texas during Summer 2023. *ADD MORE DETAILS HERE*
 
-##Data Generation
-Raw fastq files can be found *HERE*. 
+## Data Generation
+Raw fastq files can be found *HERE*.
 
 ## Determine Genetic Ancestry
 During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
