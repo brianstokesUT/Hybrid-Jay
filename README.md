@@ -19,6 +19,8 @@ During analysis we considered all possible sources of ancestry within potential 
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
+Each candidate species uses data available on NCBI - data collection is described breifly within appropriate sections and may be split between mitochondria and chromosomal sources.
+
 ## PROBABLY DITCH THIS SECTION
 I use conda to manage my working environments as some of the programs do no play nice together, below is how I make each of the environemts used in the workflow with version specific downloads.
 
@@ -38,10 +40,11 @@ conda activate bcftools
 
 
 
-# Blue Jay (*Cyanocitta cristata*)
+## Blue Jay (*Cyanocitta cristata*)
 All databases are limited by what is avaialable on NCBI for Blue Jay, potential sequences are listed in the subsections below.
 
 ### Blue Jay Mitochondria
+#### Data Sources
 
 | **GenBank**    | **GI**         | **Length (bp)** | **Gene**                 |
 |------------|------------|--------|----------------------|
