@@ -5,10 +5,11 @@
 ## Summary
 We found a putative hybrid Green Jay x Blue Jay individual in central Texas during Summer 2023. *ADD MORE DETAILS HERE*
 
-This repository describes how we obtained all results and figures related to the publication.
+This repository is split into two major sections. Firstly we describe how we determined genetic ancestry. Second we describe the generation of species range maps. 
 
+# Genetic Methods
 ## Data Generation
-Raw fastq files of the putative hybrid invividual can be found *HERE*.
+Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found *HERE*.
 
 ### Possible Parents
 During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
@@ -18,9 +19,7 @@ During analysis we considered all possible sources of ancestry within potential 
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
-Each subsection describes how representative sequences were made for each jay species. 
-
-
+## PROBABLY DITCH THIS SECTION
 I use conda to manage my working environments as some of the programs do no play nice together, below is how I make each of the environemts used in the workflow with version specific downloads.
 
 **Conda Env: alignment**
