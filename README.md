@@ -3,13 +3,30 @@
 *CITATION HERE*
 
 ## Summary
-We found a putative hybrid Green Jay x Blue Jay individual in central Texas during Summer 2023. *ADD MORE DETAILS HERE*
+<p align="center">
+  <img src="https://github.com/brianstokesUT/Hybrid-Jay/assets/91159511/e082186b-21ec-4f59-b68e-81bb3b770686" width="250">
+</p>
 
-This repository is split into two major sections. Firstly we describe how we determined genetic ancestry. Second we describe the generation of species range maps. 
+We found a putative hybrid Green Jay x Blue Jay individual in central Texas during the Summer of 2023. Using bioinformatic methods we desscribe how we determined ancestry. 
+
+This repository includes all code necessary to produce results and code of *INSERT CITATION HERE* . The reposity first describes how we determined genetic ancestry. Second we describe the generation of species range maps shown in *FIGURE NUMBER*. 
+
+1. Genomic Methods
+   - First nested list item
+     - Second nested list item
+2. Range Models
+   - First nested list item
+     - Second nested list item
+
+
 
 # Genomic Methods
+##Summary
+We used WGS data from the hybrid individual to determine paternal ancestry based on BLAST methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal speices.
+
+
 ## Data Generation
-Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found *HERE*.
+Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found [in NIH BioProject#1114044](http://www.ncbi.nlm.nih.gov/bioproject/1114044)
 
 ### Possible Parents
 During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
@@ -20,23 +37,6 @@ During analysis we considered all possible sources of ancestry within potential 
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
 Each candidate species uses data available on NCBI - data collection is described breifly within appropriate sections and may be split between mitochondria and chromosomal sources.
-
-## PROBABLY DITCH THIS SECTION
-I use conda to manage my working environments as some of the programs do no play nice together, below is how I make each of the environemts used in the workflow with version specific downloads.
-
-**Conda Env: alignment**
-```
-conda create --name alignment
-conda activate alignment
-
-```
-
-**Conda Env: bcftools**
-```
-conda create --name bcftools
-conda activate bcftools
-
-```
 
 
 
