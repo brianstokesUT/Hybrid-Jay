@@ -2,7 +2,7 @@
 ## Summary
 We used WGS data from the hybrid individual to determine ancestry using BLAST+ methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal species.
 
-All Bioinformatic processing was performed on [Texas Advanced Computing Center's (TACC) Lonestar6 cluster](https://tacc.utexas.edu/systems/lonestar6/) which is a Linux-64 based system. 
+All Bioinformatic processing was performed on [Texas Advanced Computing Center's (TACC) Lonestar6 cluster](https://tacc.utexas.edu/systems/lonestar6/) which is a Linux-64 based system.
 
 ## Hybrid Data Generation
 Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found in [NIH BioProject#1114044](http://www.ncbi.nlm.nih.gov/bioproject/1114044)
@@ -13,7 +13,7 @@ The raw reads are split into two fastq files named ```061323A_S1_L001_R1_001.fas
    *note:* sequencing data for this individual is single-ended
 
 ### Candidate Parents
-Based on location and plumage morphology we assumed the individual was the offspring of a Green Jay and Blue Jay, but we considered all possible sources of ancestry within jay species found in the state of Texas to maintain unbiased analysis: 
+Based on location and plumage morphology we assumed the individual was the offspring of a Green Jay and Blue Jay, but we considered all possible sources of parental ancestry within jay species found in the state of Texas to maintain unbiased analysis: 
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 + Steller's Jay (*Cyanocitta stelleri*)
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
@@ -21,7 +21,7 @@ Based on location and plumage morphology we assumed the individual was the offsp
 + Green Jay (*Cyanocorax yncas*)
 
 
-Reads from the hybrid individual were compared against available sequences of the candidate species in NCBI Databases using BLAST+. Data collection and prep is described breifly within appropriate sections and may be split between mitochondria and autosomal sources.
+Reads from the hybrid individual were compared against available representative sequences of the candidate species using BLAST+. Publically available sequencing data for each species was limited, so we performed variable amounts of data perp for each species so that they could be compared with eachother while minimizing sampling bias. Data collection and prep is described breifly within appropriate sections and may be split between mitochondria and autosomal sources.
 
 ## Eurasian Magpie (*Pica Pica*) Data Generation
 ### *P. pica* Mitochondrial Data
