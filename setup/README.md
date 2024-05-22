@@ -29,3 +29,13 @@ conda install bioconda::samtools
 
 mkdir raw_sequences
 ```
+
+
+# ALIGNMENT
+
+```
+conda creat --name alignment
+conda activate alignment
+conda install bioconda::bowtie2
+
+```
