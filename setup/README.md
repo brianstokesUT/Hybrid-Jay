@@ -1,3 +1,5 @@
-NCBI Entrez Direct UNIX E-utilities
+# SETUP
 
+Before run the command 
+''' bash setup.bash '''
 
