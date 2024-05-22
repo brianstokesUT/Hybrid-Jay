@@ -31,7 +31,7 @@ We used [Genome assembly ASM2580205v1 (GenBank: GCA_025802055.1](https://www.ncb
 
 
 ## Steller's Jay (*Cyanocitta stelleri*) Data Generation
-We used a *Cyanocitta stelleri* mitochondrion assembly: [Genbank assembly accession #bCyaSte1.0.p](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_026167965.1/) ([Benham et al., 2023](https://doi.org/10.1093/jhered/esad042)) from [WGS project JANXIP01](https://www.ncbi.nlm.nih.gov/nuccore/JANXIP000000000.1) to represent both autosomal and mitochondrial genomes.
+We used a *Cyanocitta stelleri* mitochondrion assembly: [Genbank assembly accession #bCyaSte1.0.p](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_026167965.1/) ([Benham et al., 2023](https://doi.org/10.1093/jhered/esad042)) from [WGS project JANXIP01](https://www.ncbi.nlm.nih.gov/nuccore/JANXIP000000000.1) to represent *C. stelleri* autosomal and mitochondrial genomes.
 
 
 ## Woodhouse's Scrub Jay (*Aphelocoma woodhousei*) Data Generation
