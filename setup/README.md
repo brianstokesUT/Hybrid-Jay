@@ -1,3 +1,21 @@
+#FOR BRIAN
+## Export and Create by requirements.txt
+
+**Export requirements.txt**
+
+```
+$ conda list -e > requirements.txt
+```
+
+**Create Environment by requirements.txt**
+
+```
+$ conda create [-n <environment-name>|-p /path/to/your/environment] --file requirements.txt
+```
+
+
+
+
 # SETUP
 
 
