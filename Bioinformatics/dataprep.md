@@ -1,5 +1,5 @@
 
-#data_prep.bash
+# data_prep.bash
 ```
 ###P. pica
 #P. pica mitochondrial
