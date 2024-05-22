@@ -2,7 +2,7 @@
 ## Summary
 We used WGS data from the hybrid individual to determine ancestry using BLAST+ methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal species.
 
-All Bioinformatic processing was performed on [Texas Advanced Computing Center's (TACC) Lonestar 6 cluster](https://tacc.utexas.edu/systems/lonestar6/) which is a Linux-64 based system. 
+All Bioinformatic processing was performed on [Texas Advanced Computing Center's (TACC) Lonestar6 cluster](https://tacc.utexas.edu/systems/lonestar6/) which is a Linux-64 based system. 
 
 ## Hybrid Data Generation
 Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found in [NIH BioProject#1114044](http://www.ncbi.nlm.nih.gov/bioproject/1114044)
