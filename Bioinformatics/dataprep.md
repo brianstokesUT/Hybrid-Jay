@@ -1,3 +1,4 @@
+```
 ###P. pica
 #P. pica mitochondrial
 esearch -db nucleotide -query "MT792356 [ACCN]" | efetch -format fasta > p_pica_mt.fasta
@@ -30,10 +31,12 @@ cp a_californica/ncbi_dataset/data/GCA_028536675.1/GCA_028536675.1_bAphCal1.0.ha
 efilter -db nucleotide -query "txid28727[organism:exp] AND mitochondrion[filter]" | efetch -format fasta > c_cristata_mt.fasta
 #C. cristata autosomal
 efilter -db nucleotide -query "txid28727[organism:exp] NOT mitochondrion[filter]" | efetch -format fasta > c_cristata_au.fasta
+```
 
 
-
-
+```
 ###C. yncas
 #C. yncas mitochondrial
 #C. yncas autosomal
+```
+
