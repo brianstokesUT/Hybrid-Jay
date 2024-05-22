@@ -12,7 +12,7 @@ The raw reads are split into two fastq files named ```061323A_S1_L001_R1_001.fas
    *note:* sequencing data for this individual is single-ended
 
 ### Candidate Parents
-Based on location and plumage morphology we assumed the indivudal was resultant of the breeding between a Green Jay and Blue Jay, but we considered all possible sources of ancestry within potential jay species found in the state of Texas to maintain unbiased analysis: 
+Based on location and plumage morphology we assumed the individual was the offspring of a Green Jay and Blue Jay, but we considered all possible sources of ancestry within jay species found in the state of Texas to maintain unbiased analysis: 
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 + Steller's Jay (*Cyanocitta stelleri*)
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
