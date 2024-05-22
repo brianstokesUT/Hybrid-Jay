@@ -34,10 +34,9 @@ cp raw_sequences/p_pica/ncbi_dataset/data/GCA_025802055.1/GCA_025802055.1_ASM258
 datasets download genome accession GCA_026167965.1 --include gff3,rna,cds,protein,genome,seq-report --filename raw_sequences/c_stelleri.zip
 unzip raw_sequences/c_stelleri.zip -d raw_sequences/c_stelleri
 #extract C. stelleri mitochondrial sequence
-samtools faidx raw_sequences/c_stelleri/ncbi_dataset/data/GCA_026167965.1/GCA_026167965.1_bCyaSte1.0.p_genomic.fna JANXIP010000352 > raw_sequences/c_selleri_mt.fasta
+samtools faidx raw_sequences/c_stelleri/ncbi_dataset/data/GCA_026167965.1/GCA_026167965.1_bCyaSte1.0.p_genomic.fna JANXIP010000352 > raw_sequences/c_stelleri_mt.fasta
 #move C. stelleri sequences
-cp raw_sequences/c_stelleri/ncbi_dataset/data/GCA_026167965.1/GCA_026167965.1_bCyaSte1.0.p_genomic.fna raw_sequences/c_selleri_au.fasta
-samtools faidx raw_sequences/c_selleri_au.fasta
+cp raw_sequences/c_stelleri/ncbi_dataset/data/GCA_026167965.1/GCA_026167965.1_bCyaSte1.0.p_genomic.fna raw_sequences/c_stelleri_au.fasta
 
 ###A. woodhousei 
 datasets download genome accession GCA_028536675.1 --include gff3,rna,cds,protein,genome,seq-report --filename raw_sequences/a_californica.zip
