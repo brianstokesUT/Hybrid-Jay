@@ -1,3 +1,22 @@
+# Hybrid 
+```
+###HYBRID
+#whatever data download steps from NCBI go here
+
+
+conda create --name trim-galore
+conda activate trim-galore
+conda install bioconda::trim-galore
+
+#combine our two fastq files
+cat raw_hybrid/*.fastq.gz > raw_hybrid/raw_hybrid.fastq.gz
+
+#trim adapters and low quality reads with default setting (trim_galore)
+trim_galore raw_hybrid/raw_hybrid.fastq.gz -o prep_hybrid/
+```
+
+
+
 
 # data_prep.bash
 ```
