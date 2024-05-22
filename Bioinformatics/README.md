@@ -1,6 +1,6 @@
 # Genomic Methods
 ## Summary
-We used WGS data from the hybrid individual to determine ancestry using BLAST methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal species.
+We used WGS data from the hybrid individual to determine ancestry using BLAST+ methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal species.
 
 
 ## Hybrid Data Generation
