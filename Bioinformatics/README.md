@@ -8,6 +8,7 @@ Raw fastq files along with library prep/sequencing details of the putative hybri
 
 
 The raw reads are split into two fastq files named ```061323A_S1_L001_R1_001.fastq.gz``` and ```061323A_S1_L002_R1_001.fastq.gz``` 
+
 *note:* sequencing data for this individual is single-ended
 
 ### Candidate Parents
