@@ -27,7 +27,7 @@ The raw reads are split into two fastq files named ```061323A_S1_L001_R1_001.fas
 ## Hybrid Data Prep
 We wanted to ensure homologous regions of each  genome were being compared during BLAST+ analysis so we first ensured the hybrid and candidate parental species sequence data were aligned to the same reference genome.
 
-After merging and trimming the two raw hybrid fastq files, we aligned these to a Steller's Jay (*Cyanocitta stelleri*) refernece genome. We then created a representative genotype for both the hybrid mitochondrial and autosomal genomes by calling variants and then creating a individual-level masked consensus sequence where "*N*" is placed at every reference basepair with insufficient high-confidence coverage of hybrid reads. 
+After merging and trimming the two raw hybrid fastq files, we aligned these to a Steller's Jay (*Cyanocitta stelleri*) refernece genome. We then created a representative genotype for both the hybrid mitochondrial and autosomal genomes by calling variants and then creating a individual-level masked consensus sequence where "*N*" is placed at basepair with insufficient high-confidence coverage of hybrid reads. This process results in a consensus fasta file where both REF and ALT (variants) are represented are presenent, while basepairs with low coverage are masked.
 
 
 
