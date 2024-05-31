@@ -16,7 +16,7 @@ samtools view -b prep_hybrid/sort.hyb.bam JANXIP010000352.1 -o prep_hybrid/hyb_m
 samtools sort prep_hybrid/hyb_mt.bam -o prep_hybrid/sort.hyb_mt.bam
 samtools index prep_hybrid/sort.hyb_mt.bam
 
-#create mask text regions file to cover unmapped/low quality positions
+#create mask text regions file to cover unmapped/low quality positions within mitochondrial scaffold
 samtools depth -a -Q 10 prep_hybrid/sort.hyb_mt.bam > prep_hybrid/mask.txt
 awk '$3==0 { print }' prep_hybrid/mask.txt > prep_hybrid/mask2.txt
 cut -d$'\t' -f1,2 prep_hybrid/mask2.txt > prep_hybrid/mask3.txt
