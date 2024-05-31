@@ -1,4 +1,4 @@
-#Align Hybrid to Steller's Jay reference genome
+# Align Hybrid to Steller's Jay reference genome
 
 ```
 ###Align hyb to steller's reference genome (conda activate alignment)
