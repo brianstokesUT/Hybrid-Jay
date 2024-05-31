@@ -21,21 +21,36 @@ Need to work on the raw sequences
 
 
 ```
-#index mitochondrial reference (c_stelleri_mt.fasta) - no need to waste computing aligning against full reference because we know where these sequences come from
+bowtie2-build -f raw_sequences/c_stelleri_mt.fasta raw_sequences/c_stelleri_mt
 samtools faidx raw_sequences/c_stelleri_mt.fasta
-bowtie2-build -f raw_sequences/c_stelleri_mt.fasta raw_sequences/cs_mt_ref
 
-#Create Alignment using bowtie2 --local preset
-bowtie2 --local -f -x raw_sequences/cs_mt_ref -f -U raw_sequences/c_cristata_mt.fasta --no-unal | samtools view -bS > prep_mt/c_cristata_mt.bam
+bowtie2 --very-sensitive-local -x raw_sequences/c_stelleri_mt -f -U raw_sequences/c_cristata_mt.fasta | samtools view -bS > prep_mt/c_cristata_mt.bam
+
+
+#####################################3
+
 
 samtools sort prep_mt/c_cristata_mt.bam -o prep_mt/sort.c_cristata_mt.bam
 samtools index prep_mt/sort.c_cristata_mt.bam
 
 
-(i think this creates a single fasta and fills in gaps with the steller's jay)
-#Then we create a single C. cristata mitochondrial fasta file which all gaps not represented by the raw sequence files being filled in by the Steller's Jay refernce
-bcftools mpileup -Ou -f raw_sequences/c_stelleri_mt.fasta prep_mt/sort.c_cristata_mt.bam | bcftools call -Ou -mv | bcftools norm -f raw_sequences/c_cristata_mt.fasta -Oz -o prep_mt/c_cristata_mt.vcf.gz
 
+########################
+
+bcftools mpileup -Ou -f raw_sequences/c_stelleri_mt.fasta prep_mt/sort.c_cristata_mt.bam | bcftools call -Ou -mv | bcftools norm -f raw_sequences/c_stelleri_mt.fasta -Oz -o prep_mt/c_cristata_mt.vcf.gz
+bcftools index prep_mt/c_cristata_mt.vcf.gz
+
+######################################
+
+
+conda deactivate
+conda activate gatk4
+
+gatk CreateSequenceDictionary -R raw_sequences/c_stelleri_mt.fasta
+
+gatk IndexFeatureFile -I prep_mt/c_cristata_mt.vcf.gz
+
+gatk FastaAlternateReferenceMaker -R raw_sequences/c_stelleri_mt.fasta -O c_cristata_mt_FINAL.fasta -V prep_mt/c_cristata_mt.vcf.gz
 
 ```
 
