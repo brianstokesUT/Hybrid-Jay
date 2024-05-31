@@ -115,8 +115,25 @@ bcftools consensus -f /scratch/08209/brian97/hybrid/mt_raw/pica_ref/pica_mt.fast
 
 
 
-
-
-
+# C. yncas
+Need to do lots of work on the raw paired end read files.
 
 ```
+for R1_FILE in raw_sequences/c_yncas/*_R1_001.fastq.gz 
+do
+	#Extract R1 File Name
+	BASE_NAME=$(basename $R1_FILE _R1_001.fastq.gz)
+	PREFIX=${BASE_NAME:0:2}
+
+	#Reconstruct R2 File Name
+	R2_FILE="${BASE_NAME}_R2_001.fastq.gz"
+	
+	#BAM output file name
+	OUTPUT_BAM="cy${PREFIX}.bam"
+
+	bowtie2 -q -x raw_sequences/cs_ref -1 raw_sequences/c_yncas/$R1_FILE -2 raw_sequences/c_yncas/$R2_FILE --no-unal | samtools view -bS > raw_sequences/c_yncas/$OUTPUT_BAM
+
+
+done
+```
+
