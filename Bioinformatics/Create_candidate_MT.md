@@ -33,7 +33,9 @@ samtools index prep_mt/sort.c_cristata_mt.bam
 
 
 (i think this creates a single fasta and fills in gaps with the steller's jay)
+#Then we create a single C. cristata mitochondrial fasta file which all gaps not represented by the raw sequence files being filled in by the Steller's Jay refernce
 bcftools mpileup -Ou -f raw_sequences/c_stelleri_mt.fasta prep_mt/sort.c_cristata_mt.bam | bcftools call -Ou -mv | bcftools norm -f raw_sequences/c_cristata_mt.fasta -Oz -o prep_mt/c_cristata_mt.vcf.gz
+
 
 ```
 
