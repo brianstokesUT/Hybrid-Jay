@@ -2,7 +2,7 @@
 ## Summary
 We used WGS data from the hybrid individual to determine ancestry using BLAST+ methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal species.
 
-All Bioinformatic processing was performed on [Texas Advanced Computing Center's (TACC) Lonestar6 cluster](https://tacc.utexas.edu/systems/lonestar6/) which is a Linux-64 based system. If you desire to run below code on your own machine or cluster you should adjust commands as necessary for your machine's opperating capacities.
+All Bioinformatic processing was performed on [Texas Advanced Computing Center's (TACC) Lonestar6 cluster](https://tacc.utexas.edu/systems/lonestar6/) which is a Linux-64 based system. If you desire to run included code on your own machine or cluster you should adjust commands as necessary for your machine's opperating capacities.
 
 ## Conceptual Overview & Candidate Parents
 Based on location and plumage morphology we assumed the individual was the offspring of a Green Jay and Blue Jay, but we considered all possible sources of parental ancestry within jay species found in the state of Texas to maintain unbiased analysis: 
