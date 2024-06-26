@@ -14,6 +14,17 @@ $ conda create [-n <environment-name>|-p /path/to/your/environment] --file requi
 ```
 
 
+CONDA ENVS
+
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+
+mamba create --name data_prep 
+mamba activate data_prep
+mamba install trim-galore=0.6.10 entrez-direct=22.1 samtools=1.20-0 ncbi-datasets-cli=16.22.1 bowtie2=2.5.4-1
+
+
 
 
 # SETUP
