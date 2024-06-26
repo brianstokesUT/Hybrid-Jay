@@ -1,4 +1,4 @@
-#FOR BRIAN
+#FOR BRIAN (Need to have setup for each folder eventually used, all environments, and other tools used (BLAST, etc)
 ## Export and Create by requirements.txt
 
 **Export requirements.txt**
