@@ -10,4 +10,4 @@ apptainer build shapeit5.sif docker://abelean/shapeit5:5.1.1
 wget https://github.com/odelaneau/shapeit5/releases/download/v5.1.1/phase_common_static
 chmod +x phase_common_static
 
-phase_common --seed 01000010 --I phasing/hyb_JANXIP010000005.1.vcf.gz --output phasing/target.phased.bcf
+phasing/phase_common_static --seed 01000010 --I phasing/hyb_JANXIP010000005.1.vcf.gz --output phasing/target.phased.bcf
