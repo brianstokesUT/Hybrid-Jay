@@ -4,10 +4,22 @@ bcftools mpileup -Ou -q 20 -r JANXIP010000005.1 -f raw_sequences/c_stelleri_au.f
 bcftools index phasing/hyb_JANXIP010000005.1.vcf.gz
 
 
-apptainer build shapeit5.sif docker://abelean/shapeit5:5.1.1
 
 
 wget https://github.com/odelaneau/shapeit5/releases/download/v5.1.1/phase_common_static
 chmod +x phase_common_static
 
 phasing/phase_common_static --seed 01000010 --input phasing/hyb_JANXIP010000005.1.vcf.gz --output phasing/target.phased.bcf --region JANXIP010000005.1
+
+
+
+
+
+
+
+
+mamba create --name gatk4 gatk4=4.5.0.0
+mamba activate gatk4
+
+
+gatk HaplotypeCaller -R raw_sequences/c_stelleri_au.fasta -I prep_hybrid/sort.hyb.bam -O phasing/phase_hyb_JANXIP010000005.1.g.vcf.gz -ERC GVCF --intervals JANXIP010000005.1
