@@ -11,6 +11,9 @@ bowtie2 --threads 24 -q -x raw_sequences/cs_ref -U prep_hybrid/raw_hybrid_trimme
 samtools sort prep_hybrid/hyb.bam -o prep_hybrid/sort.hyb.bam
 samtools index prep_hybrid/sort.hyb.bam
 
+#add sample/readgroup name - will be used downstream
+picard AddOrReplaceReadGroups I=prep_hybrid/sort.hyb.bam O=prep_hybrid/sort.hyb.bam RGID=4 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=1
+
 #extract mitochondrial scaffold
 samtools view -b prep_hybrid/sort.hyb.bam JANXIP010000352.1 -o prep_hybrid/hyb_mt.bam
 samtools sort prep_hybrid/hyb_mt.bam -o prep_hybrid/sort.hyb_mt.bam
