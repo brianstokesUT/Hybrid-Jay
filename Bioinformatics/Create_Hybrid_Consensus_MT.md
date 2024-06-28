@@ -1,4 +1,4 @@
-# Align Hybrid to Steller's Jay reference genome
+# Align Hybrid to Steller's Jay reference genome (brian come back to edit naming issues!)
 
 ```
 ###Align hyb to steller's reference genome (conda activate alignment)
@@ -8,11 +8,12 @@ bowtie2-build raw_sequences/c_stelleri_au.fasta raw_sequences/cs_ref
 
 #align and sort
 bowtie2 --threads 24 -q -x raw_sequences/cs_ref -U prep_hybrid/raw_hybrid_trimmed.fq.gz --no-unal | samtools view -bS > prep_hybrid/hyb.bam
-samtools sort prep_hybrid/hyb.bam -o prep_hybrid/sort.hyb.bam
-samtools index prep_hybrid/sort.hyb.bam
+samtools sort prep_hybrid/hyb.bam -o prep_hybrid/sort.hyb_noname.bam
+samtools index prep_hybrid/sort.hyb_noname.bam
 
 #add sample/readgroup name - will be used downstream
-picard AddOrReplaceReadGroups I=prep_hybrid/sort.hyb.bam O=prep_hybrid/sort.hyb.bam RGID=4 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=1
+picard AddOrReplaceReadGroups I=prep_hybrid/sort.hyb_noname.bam O=prep_hybrid/sort.hyb.bam RGID=4 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=1
+samtools index prep_hybrid/sort.hyb.bam
 
 #extract mitochondrial scaffold
 samtools view -b prep_hybrid/sort.hyb.bam JANXIP010000352.1 -o prep_hybrid/hyb_mt.bam
