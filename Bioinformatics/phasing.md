@@ -1,23 +1,5 @@
 mkdir phasing
 
-bcftools mpileup -Ou -q 20 -r JANXIP010000005.1 -f raw_sequences/c_stelleri_au.fasta prep_hybrid/sort.hyb.bam | bcftools call -Ou -c | bcftools norm -f raw_sequences/c_stelleri_au.fasta -Oz -o phasing/hyb_JANXIP010000005.1.vcf.gz
-bcftools index phasing/hyb_JANXIP010000005.1.vcf.gz
-
-
-
-
-wget https://github.com/odelaneau/shapeit5/releases/download/v5.1.1/phase_common_static
-chmod +x phase_common_static
-
-phasing/phase_common_static --seed 01000010 --input phasing/hyb_JANXIP010000005.1.vcf.gz --output phasing/target.phased.bcf --region JANXIP010000005.1
-
-
-
-
-
-
-
-
 mamba create --name gatk4 gatk4=4.5.0.0
 mamba activate gatk4
 
