@@ -14,3 +14,11 @@ bcftools consensus -H 2 -f raw_sequences/c_stelleri_au.fasta phasing/phase_hyb_J
 
 samtools faidx raw_sequences/c_stelleri_au.fasta JANXIP010000005.1 | bcftools consensus -H 1 phasing/phase_hyb_JANXIP010000005.1.g.vcf.gz -o hyb_JANXIP010000005.1_haplotype1.fasta
 samtools faidx raw_sequences/c_stelleri_au.fasta JANXIP010000005.1 | bcftools consensus -H 2 phasing/phase_hyb_JANXIP010000005.1.g.vcf.gz -o hyb_JANXIP010000005.1_haplotype2.fasta
+
+
+
+
+candidate_rag1_db
+/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_JANXIP010000005.1_haplotype1.fasta -db rag1/candidate_rag1_db -out rag1/hap1_rag1_blast.out
+
+/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_JANXIP010000005.1_haplotype2.fasta -db rag1/candidate_rag1_db -out rag1/hap2_rag1_blast.out
