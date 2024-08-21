@@ -9,7 +9,7 @@
 
 We found a putative hybrid Green Jay x Blue Jay individual in central Texas during the Summer of 2023. Using bioinformatic methods we desscribe how we determined ancestry. 
 
-This repository includes all code necessary to produce results and code of *INSERT CITATION HERE* . The reposity first describes how we determined genetic ancestry. Second we describe the generation of species range maps shown in *FIGURE NUMBER*. 
+This repository includes all code necessary to produce results of *INSERT CITATION HERE* . The reposity first describes how we determined genetic ancestry. Second we describe the generation of species range maps shown in *FIGURE NUMBER*. 
 
 1. Genomic Methods
    - First nested list item
