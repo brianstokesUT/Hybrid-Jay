@@ -15,9 +15,12 @@ This repository includes all code necessary to produce results of *INSERT CITATI
    - First nested list item
      - Second nested list item
 2. Range Models
-   - First nested list item
-     - Second nested list item
-
+   - bioclim_dataprep.R
+     - Preperation of BioClim data for our climate model, some steps may not be necessary if you have a sufficiently powerful computer
+   - ebird_and_maxent.R
+     - Preperation of eBird data and production of maxent models for *FIGURE 2*
+   - Figures.R
+     - Code to produce each portion of *FIGURE 2*
 
 
 # Genomic Methods
