@@ -8,7 +8,7 @@ Mahony, C.R., T. Wang, A. Hamann, and A.J. Cannon. 2022. A global climate model 
 
 We specifically downloaded the [33 Bioclim "climate normals" for the period of 1991-2020](https://adaptwest.databasin.org/pages/adaptwest-climatena/#:~:text=1991%2D2020%20period-,zipfile,-zipfile) to represent Current (or recent) enviromental conditions through which range overlap has occured.
 
-We next downloaded the [33 Bioclim "climate_normals" projection for the period of 2041-2060](https://s3-us-west-2.amazonaws.com/www.cacpd.org/CMIP6v73/ensembles/ensemble_8GCMs_ssp245_2041_2060_bioclim.zip) This data represents the ensemble mean of 8 CMIP6 AOGCMs for the ssp245 climate pathway, which represents minimal change to current production carbon. It is also considered a ["middle of the road" outcome](https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change/). 
+We next downloaded the [33 Bioclim "climate_normals" projection for the period of 2041-2060](https://s3-us-west-2.amazonaws.com/www.cacpd.org/CMIP6v73/ensembles/ensemble_8GCMs_ssp245_2041_2060_bioclim.zip) This data represents the ensemble mean of 8 CMIP6 AOGCMs for the ssp245 climate pathway, which represents minimal change to current production of carbon. It isconsidered a ["middle of the road" outcome](https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change/). 
 
 These data are processed using [bioclim_dataprep.R](https://github.com/brianstokesUT/Hybrid-Jay/blob/main/Range%20Model/bioclim_dataprep.R)
 
