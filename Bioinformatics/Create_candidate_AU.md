@@ -1,6 +1,7 @@
 
 
 First we'll pull a selected autosomal sequence of interest from the *C. cristata* dataset
+In this example we'll focus on AY443280.1 which is one of the longest sequences available and covers the RAG1 region. Other regions will follow similar steps but will need some edited scripts.
 
 ```
 awk '/^>AY443280.1/{flag=1;print;next}/^>/{flag=0}flag' raw_sequences/c_cristata_au.fasta > raw_sequences/c_cristata_AY443280.1.fasta
