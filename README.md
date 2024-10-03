@@ -15,7 +15,7 @@ This repository includes all code necessary to produce results of *INSERT CITATI
    - First nested list item
      - Second nested list item
 2. Range Models
-   - Range_data.md
+   - README.md
      - described datasources for Range Models
    - bioclim_dataprep.R
      - Preperation of BioClim data for our climate model, some steps may not be necessary if you have a sufficiently powerful computer
