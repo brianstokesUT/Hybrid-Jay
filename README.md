@@ -36,7 +36,7 @@ During analysis we considered all possible sources of ancestry within potential 
 + Woodhouse's Scrub Jay (*Aphelocoma woodhousei*)
 + Eurasian Magpie (*Pica Pica*) - **OUTGROUP**
 
-Each candidate species uses data available on NCBI - data collection is described breifly within appropriate sections and may be split between mitochondria and chromosomal sources.
+Each candidate species uses data available on NCBI - data collection is described within appropriate sections and may be split between mitochondria and chromosomal sources.
 
 
 
@@ -151,7 +151,7 @@ bcftools consensus -f /scratch/08209/brian97/hybrid/mt_raw/cya_ste/JANXIP0100003
 
 
 ## Green Jay (*Cyanocorax yncas*)
-We used WGS data from 7 Green Jay samples captured throughout Texas. Samples were sequenced using PE, 150bp, 10x coverage. We aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
+We used WGS data from 4 Green Jay samples captured throughout Texas. Samples were sequenced using PE, 150bp, 10x coverage. We aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
 
 ### Green Jay Mitochondria
 
