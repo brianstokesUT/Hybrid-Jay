@@ -59,7 +59,7 @@ samtools faidx raw_sequences/p_pica_au.fasta JAOYNA010000039.1:44057536-44060407
 ```
 
 
-Make *C. yncas* slightly differently
+*C. yncas* alignment will have the same homologous positionality as the Steller's Jay reference.
 ```
 #call high confidencevariants at the RAG1 gene from our previously sorted bam files
 bcftools mpileup -Ou -q 20 -r JANXIP010000005.1:37834112-37836993 -f raw_sequences/c_stelleri_au.fasta prep_mt/sort.cy01.bam prep_mt/sort.cy02.bam prep_mt/sort.cy03.bam prep_mt/sort.cy04.bam | bcftools call -Ou -mv | bcftools norm -f raw_sequences/c_stelleri_au.fasta -Oz -o rag1/c_yncas_rag1.vcf.gz 
@@ -75,14 +75,14 @@ gatk FastaAlternateReferenceMaker -R raw_sequences/c_stelleri_au.fasta -O rag1/c
 
 ```
 
-Next yank approximately homologous regions of the hybrid reads to act as the query file for blast
+Next homologous regions of the hybrid reads along with 100bp flanking on each end.
 ```
 ###########Call aligned sequences from hybrid which were mapped to specific genes (IMPORTANT NOT TO CALL CONSENSUS)
 
 conda deactivate
 conda activate aligment 
 #check depth at the RAG1 gene 
-#samtools depth -a -r JANXIP010000005.1:37834112-37836993 prep_hybrid/sort.hyb.bam | more
+#samtools depth -a -r JANXIP010000005.1:37834012-37837003 prep_hybrid/sort.hyb.bam | more
 #depth is really solid here
 
 #subset highquality mapped reads from this region (min MAPQ score of 10)
@@ -95,7 +95,7 @@ samtools fasta rag1/sort.hyb_rag1.bam -0 rag1/hyb_rag1.fasta
 
 ```
 
-Blastoff
+Prep for BLAST database
 
 ```
 #quickly edit RAG1 fasta files headers to have easier to use names
@@ -107,13 +107,13 @@ sed -i '1s/.*/>p_pica_rag1/' rag1/p_pica_rag1.fasta
 
 
 ####Put all RAG1's into a single fasta
-
-
 cat raw_sequences/c_cristata_AY443280.1.fasta rag1/c_yncas_rag1.fasta rag1/c_stelleri_rag1.fasta rag1/a_californica_rag1.fasta rag1/p_pica_rag1.fasta > rag1/candidate_rag1.fasta
 
+#use BLAST makeblastdb tool
 /work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in rag1/candidate_rag1.fasta -out rag1/candidate_rag1_db -dbtype nucl -title rag1/candidate_rag1_db
 
 
+#Run against our hybird just to see how it looks - more accurate results will come from phasing as described in "phasing.md"
 /work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query /scratch/08209/brian97/hybrid/autosomes/homolog/hyb_rag1.fasta -db rag1/candidate_rag1_db -out rag1/rag1_blast.out
 
 
