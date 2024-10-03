@@ -7,6 +7,7 @@ In this example we'll focus on AY443280.1 which is one of the longest sequences 
 awk '/^>AY443280.1/{flag=1;print;next}/^>/{flag=0}flag' raw_sequences/c_cristata_au.fasta > raw_sequences/c_cristata_AY443280.1.fasta
 ```
 
+Now we want to find the homologous region within the Steller's Jay genome - this should also be verified by checking through NCBI.
 ```
 #make blast db
 /work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in raw_sequences/c_stelleri_au.fasta -out rag1/c_stelleri_au_db -dbtype nucl -title rag1/c_stelleri_au_db
