@@ -14,7 +14,7 @@ These data are processed using [bioclim_dataprep.R](https://github.com/brianstok
 
 
 ## eBird Data
-eBird data products require admin access and can be requested by following direction [at this link](https://science.ebird.org/en/use-ebird-data). 
+eBird data products require admin access and can be requested by following directions [at this link](https://science.ebird.org/en/use-ebird-data). 
 
 ### Green Jay Data
 Use the custom download tool for the eBird Basic Dataset to select Green Jay within the regions of Texas and Mexico for all dates. This will result in two large zipfiles which should be extracted to your working directory.
