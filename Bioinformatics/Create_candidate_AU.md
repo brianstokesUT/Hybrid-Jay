@@ -114,7 +114,7 @@ cat raw_sequences/c_cristata_AY443280.1.fasta rag1/c_yncas_rag1.fasta rag1/c_ste
 
 
 #Run against our hybird just to see how it looks - more accurate results will come from phasing as described in "phasing.md"
-~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query /scratch/08209/brian97/hybrid/autosomes/homolog/hyb_rag1.fasta -db rag1/candidate_rag1_db -out rag1/rag1_blast.out
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query ~PATH/autosomes/homolog/hyb_rag1.fasta -db rag1/candidate_rag1_db -out rag1/rag1_blast.out
 
 #view results
 nano rag1/rag1_blast.out
