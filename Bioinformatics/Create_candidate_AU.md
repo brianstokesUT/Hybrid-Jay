@@ -20,7 +20,7 @@ Now we want to find the homologous region within the Steller's Jay genome - this
 
 #now create a fasta of just this region from C. stelleri 
 
-conda activate samtools
+mamba activate data_prep
 samtools faidx raw_sequences/c_stelleri_au.fasta JANXIP010000005.1:37834122-37836993 > rag1/c_stelleri_rag1.fasta
 ```
 Then we do the same query and split process for all other samples
@@ -37,7 +37,7 @@ Then we do the same query and split process for all other samples
 
 #now create a fasta of just this region from A. californica 
 
-conda activate samtools
+mamba activate data_prep
 samtools faidx raw_sequences/a_californica_au.fasta JAQMYR010000007.1:21718278-21721149 > rag1/a_californica_rag1.fasta
 
 
@@ -54,7 +54,7 @@ samtools faidx raw_sequences/a_californica_au.fasta JAQMYR010000007.1:21718278-2
 
 #now create a fasta of just this region from A. californica 
 
-conda activate samtools
+mamba activate data_prep
 samtools faidx raw_sequences/p_pica_au.fasta JAOYNA010000039.1:44057536-44060407 > rag1/p_pica_rag1.fasta
 ```
 
@@ -66,8 +66,8 @@ bcftools mpileup -Ou -q 20 -r JANXIP010000005.1:37834112-37836993 -f raw_sequenc
 bcftools index rag1/c_yncas_rag1.vcf.gz
 
 #create consensus sequence at the same homologous region of C. stelleri because that served as the C. yncas reference
-conda deactivate
-conda activte gatk4
+mamba deactivate
+mamba activte gatk4
 
 gatk IndexFeatureFile -I rag1/c_yncas_rag1.vcf.gz
 
@@ -79,8 +79,8 @@ Next homologous regions of the hybrid reads along with 100bp flanking on each en
 ```
 ###########Call aligned sequences from hybrid which were mapped to specific genes (IMPORTANT NOT TO CALL CONSENSUS)
 
-conda deactivate
-conda activate aligment 
+mamba deactivate
+mamba activate data_prep
 #check depth at the RAG1 gene 
 #samtools depth -a -r JANXIP010000005.1:37834012-37837003 prep_hybrid/sort.hyb.bam | more
 #depth is really solid here
