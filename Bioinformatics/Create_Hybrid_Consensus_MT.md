@@ -1,7 +1,7 @@
-# Align Hybrid to Steller's Jay reference genome (brian come back to edit naming issues!)
+# Align Hybrid to Steller's Jay reference genome 
 
 ```
-###Align hyb to steller's reference genome (conda activate alignment)
+mamba activate data_prep
 
 #index reference (c_stelleri_au.fasta)
 bowtie2-build raw_sequences/c_stelleri_au.fasta raw_sequences/cs_ref
