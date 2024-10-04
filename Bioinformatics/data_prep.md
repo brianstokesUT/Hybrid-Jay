@@ -16,6 +16,44 @@ mamba deactivate
 # Green Jay
 Retrieval of SRA data by BioProject accession is not supported by NCBI Datasets at this time. Refer to the README.md to download relevant files including BioSample accessions SAMN44062996, SAMN44062997, SAMN44062998, SAMN44062999. Files should be placed into ~PATH/raw_sequences/c_yncas/
 
+```
+mamba activate data_prep
+
+for R1_FILE in raw_sequences/c_yncas/*_R1_001.fastq.gz 
+do
+	#Extract R1 File Name
+	BASE_NAME=$(basename $R1_FILE _R1_001.fastq.gz)
+	PREFIX=${BASE_NAME:0:2}
+
+	#Reconstruct R2 File Name
+	R2_FILE="${BASE_NAME}_R2_001.fastq.gz"
+	
+	#BAM output file name
+	OUTPUT_BAM="cy${PREFIX}.bam"
+
+	bowtie2 -q -x raw_sequences/cs_ref -1 raw_sequences/c_yncas/$R1_FILE -2 raw_sequences/c_yncas/$R2_FILE --no-unal | samtools view -bS > raw_sequences/c_yncas/$OUTPUT_BAM
+
+done
+
+# Sort and index
+samtools sort raw_sequences/c_yncas/cy01.bam -o prep_mt/sort.cy01.bam
+samtools index prep_mt/sort.cy01.bam
+
+samtools sort raw_sequences/c_yncas/cy02.bam -o prep_mt/sort.cy02.bam
+samtools index prep_mt/sort.cy02.bam
+
+samtools sort raw_sequences/c_yncas/cy03.bam -o prep_mt/sort.cy03.bam
+samtools index prep_mt/sort.cy03.bam
+
+samtools sort raw_sequences/c_yncas/cy04.bam -o prep_mt/sort.cy04.bam
+samtools index prep_mt/sort.cy04.bam
+
+# Create VCF
+bcftools mpileup -Ou -f raw_sequences/c_stelleri_au.fasta prep_mt/sort.cy01.bam prep_mt/sort.cy02.bam prep_mt/sort.cy03.bam prep_mt/sort.cy04.bam | bcftools call -Ou -mv | bcftools norm -f raw_sequences/c_stelleri_au.fasta -Oz -o prep_mt/c_yncas.vcf.gz
+bcftools index prep_mt/c_yncas.vcf.gz
+
+
+```
 
 # data_prep.bash
 ```
