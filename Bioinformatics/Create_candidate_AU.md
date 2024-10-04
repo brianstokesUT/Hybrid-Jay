@@ -1,7 +1,7 @@
 
 
 First we'll pull a selected autosomal sequence of interest from the *C. cristata* dataset
-In this example we'll focus on AY443280.1 which is one of the longest sequences available and covers the RAG1 region. Other regions will follow similar steps but will need some edited scripts.
+In this example we'll focus on AY443280.1 which is one of the longest sequences available and includes partial coverage of the RAG1 gene region. Other regions will follow similar steps but will need some edited scripts to replace which region is used.
 
 ```
 awk '/^>AY443280.1/{flag=1;print;next}/^>/{flag=0}flag' raw_sequences/c_cristata_au.fasta > raw_sequences/c_cristata_AY443280.1.fasta
@@ -10,10 +10,10 @@ awk '/^>AY443280.1/{flag=1;print;next}/^>/{flag=0}flag' raw_sequences/c_cristata
 Now we want to find the homologous region within the Steller's Jay genome - this should also be verified by checking through NCBI.
 ```
 #make blast db
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in raw_sequences/c_stelleri_au.fasta -out rag1/c_stelleri_au_db -dbtype nucl -title rag1/c_stelleri_au_db
+~PATH/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in raw_sequences/c_stelleri_au.fasta -out rag1/c_stelleri_au_db -dbtype nucl -title rag1/c_stelleri_au_db
 
 #search the the RAG1 sequence of C. cristata against this db to find the homologous region
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query raw_sequences/c_cristata_AY443280.1.fasta -db rag1/c_stelleri_au_db -out rag1/AY443280.1_rag1_blast.out
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query raw_sequences/c_cristata_AY443280.1.fasta -db rag1/c_stelleri_au_db -out rag1/AY443280.1_rag1_blast.out
 
 #nano rag1/AY443280.1_rag1_blast.out
 #JANXIP010000005.1:37834122-37836993
@@ -27,10 +27,10 @@ Then we do the same query and split process for all other samples
 ```
 #########################A. californica
 #make blast db
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in raw_sequences/a_californica_au.fasta -out rag1/a_californica_au_db -dbtype nucl -title rag1/a_californica_au_db
+~PATH/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in raw_sequences/a_californica_au.fasta -out rag1/a_californica_au_db -dbtype nucl -title rag1/a_californica_au_db
 
 #search the the RAG1 sequence of A. californica against this db to find the homologous region
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query raw_sequences/c_cristata_AY443280.1.fasta -db rag1/a_californica_au_db -out rag1/a_californica_rag1_blast.out
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query raw_sequences/c_cristata_AY443280.1.fasta -db rag1/a_californica_au_db -out rag1/a_californica_rag1_blast.out
 
 #nano rag1/a_californica_rag1_blast.out
 #JAQMYR010000007.1:21718278-21721149
@@ -44,10 +44,10 @@ samtools faidx raw_sequences/a_californica_au.fasta JAQMYR010000007.1:21718278-2
 
 #########################P. pica
 #make blast db
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in raw_sequences/p_pica_au.fasta -out rag1/p_pica_au_db -dbtype nucl -title rag1/p_pica_au_db
+~PATH/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in raw_sequences/p_pica_au.fasta -out rag1/p_pica_au_db -dbtype nucl -title rag1/p_pica_au_db
 
 #search the the RAG1 sequence of A. californica against this db to find the homologous region
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query raw_sequences/c_cristata_AY443280.1.fasta -db rag1/p_pica_au_db -out rag1/p_pica_rag1_blast.out
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query raw_sequences/c_cristata_AY443280.1.fasta -db rag1/p_pica_au_db -out rag1/p_pica_rag1_blast.out
 
 #nano rag1/p_pica_rag1_blast.out
 #JAOYNA010000039.1:44057536-44060407
@@ -110,13 +110,14 @@ sed -i '1s/.*/>p_pica_rag1/' rag1/p_pica_rag1.fasta
 cat raw_sequences/c_cristata_AY443280.1.fasta rag1/c_yncas_rag1.fasta rag1/c_stelleri_rag1.fasta rag1/a_californica_rag1.fasta rag1/p_pica_rag1.fasta > rag1/candidate_rag1.fasta
 
 #use BLAST makeblastdb tool
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in rag1/candidate_rag1.fasta -out rag1/candidate_rag1_db -dbtype nucl -title rag1/candidate_rag1_db
+~PATH/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in rag1/candidate_rag1.fasta -out rag1/candidate_rag1_db -dbtype nucl -title rag1/candidate_rag1_db
 
 
 #Run against our hybird just to see how it looks - more accurate results will come from phasing as described in "phasing.md"
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query /scratch/08209/brian97/hybrid/autosomes/homolog/hyb_rag1.fasta -db rag1/candidate_rag1_db -out rag1/rag1_blast.out
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query /scratch/08209/brian97/hybrid/autosomes/homolog/hyb_rag1.fasta -db rag1/candidate_rag1_db -out rag1/rag1_blast.out
 
-
+#view results
+nano rag1/rag1_blast.out
 
 ```
 
