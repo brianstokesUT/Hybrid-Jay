@@ -14,7 +14,7 @@ trim_galore raw_hybrid/raw_hybrid.fastq.gz -o prep_hybrid/
 mamba deactivate
 ```
 
-# data_prep.bash
+# Download and basic prep of candidate data
 ```
 ###P. pica
 #P. pica mitochondrial
@@ -46,6 +46,10 @@ cp raw_sequences/a_californica/ncbi_dataset/data/GCA_028536675.1/GCA_028536675.1
 efilter -db nucleotide -query "txid28727[organism:exp] AND mitochondrion[filter]" | efetch -format fasta > raw_sequences/c_cristata_mt.fasta
 #C. cristata autosomal
 efilter -db nucleotide -query "txid28727[organism:exp] NOT mitochondrion[filter]" | efetch -format fasta > raw_sequences/c_cristata_au.fasta
+```
+# Prep C. stelleri to serve as reference genome
+```
+bowtie2-build -f ~PATH/raw_sequences/c_stelleri/ncbi_dataset/data/GCA_026167965.1/GCA_026167965.1_bCyaSte1.0.p_genomic.fna raw_sequences/cs_ref
 ```
 
 # Green Jay
