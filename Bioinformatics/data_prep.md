@@ -25,7 +25,6 @@ unzip raw_sequences/p_pica.zip -d raw_sequences/p_pica
 #move P. pica sequences
 cp raw_sequences/p_pica/ncbi_dataset/data/GCA_025802055.1/GCA_025802055.1_ASM2580205v1_genomic.fna raw_sequences/p_pica_au.fasta
 
-
 ###C. stelleri 
 datasets download genome accession GCA_026167965.1 --include gff3,rna,cds,protein,genome,seq-report --filename raw_sequences/c_stelleri.zip
 unzip raw_sequences/c_stelleri.zip -d raw_sequences/c_stelleri
