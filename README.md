@@ -18,10 +18,14 @@ This repository includes all code necessary to produce results of *INSERT CITATI
    - dataprep.md
      - Describes how to download and prepare raw sequence data via command line for mitochondrial and autosomal analyses
    - Create_Hybrid_Consensus_MT.md
-   - Create_Hybrid_Consensus_AU.md
+     - Describes how to create a representative mitochondrial scaffold of the hybird
    - Create_candidate_MT.md
+     - Describes steps to prep and create local mitochondrial BLAST database
    - Create_candidate_AU.md
+     - Describes steps to prep and create local RAG1 Blast database
+     - *NOTE*: creation of databases for additonal genes can be performed based on the code described in this file
    - phasing.md
+     - Describes steps for phasing of the hybrid genome for the region surrounding the RAG1 gene and running a blast search against the candidate RAG1 dataset
 2. Range Models
    - README.md
      - described datasources for Range Models
