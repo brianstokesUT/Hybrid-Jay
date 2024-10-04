@@ -1,3 +1,24 @@
+# Tools and mamba environments
+
+Download the BLAST+ tool based on the [directions found on NCBI](https://www.ncbi.nlm.nih.gov/books/NBK569861/#intro_Installation.RedHat_Linux) to a folder titled "~PATH/tools/"
+
+
+# Next ensure that your machine can run mamba and create the following environemnts
+
+```
+# Make necessary conda channels available
+mamba config --add channels bioconda
+mamba config --add channels conda-forge
+
+
+# Create environment "data_prep" and install associated packages
+mamba create --name data_prep trim-galore=0.6.10 entrez-direct=22.1 samtools=1.20-0 ncbi-datasets-cli=16.22.1 bowtie2=2.5.4 bcftools=1.20 shapeit5=5.1.1 picard=3.1.1
+
+# Create environment "gatk4" and install associated packages
+# this version of gatk4 seemed to create conflict when installed to data_prep environment
+mamba create --name gatk4 gatk4=4.5.0.0
+```
+
 # Hybrid 
 Retrieval of SRA data by BioProject accession is not supported by NCBI Datasets at this time. Refer to the README.md to download relevant file. These files should be placed into ~PATH/raw_hybird/
 ```
