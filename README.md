@@ -11,7 +11,7 @@ We found a putative hybrid Green Jay x Blue Jay individual in central Texas duri
 
 This repository includes all code necessary to produce results of *INSERT CITATION HERE* . The reposity first describes how we determined genetic ancestry and generation of *figure number*. Second we describe the generation of species range maps shown in *FIGURE NUMBER*. 
 
-1. Genomic Methods
+1. Bioinformatics
    - First nested list item
      - Second nested list item
 2. Range Models
