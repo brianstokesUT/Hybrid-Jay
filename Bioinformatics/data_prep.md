@@ -8,14 +8,16 @@ mamba activate dataprep
 mkdir raw_hybrid
 
 mamba deactivate
+mamba create --name trim-galore
 mamba activate trim-galore
-
+mamba install bioconda::trim-galore
 
 #combine our two fastq files
 cat raw_hybrid/*.fastq.gz > raw_hybrid/raw_hybrid.fastq.gz
 
 #trim adapters and low quality reads with default setting (trim_galore)
 trim_galore raw_hybrid/raw_hybrid.fastq.gz -o prep_hybrid/
+mamba deactivate
 ```
 
 
