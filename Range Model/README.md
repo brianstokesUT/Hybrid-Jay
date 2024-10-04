@@ -1,5 +1,6 @@
 # Range Model Data Acquisition
 
+Data should all be donwload to the same directroy - .R files refer to a ~PATH/ which should be edited to suit your local directory
 
 ## Bioclim Data
 We used Bioclim data from [ADAPTWEST](https://adaptwest.databasin.org/pages/adaptwest-climatena/) because it included the variable "NFFD: the number of frost-free days" which should act as a reasonable proxy Freezing Temperature events which likely have some relation to the winter survival of a tropical species like the Green Jay.
