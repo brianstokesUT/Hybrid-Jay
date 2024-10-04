@@ -1,12 +1,13 @@
 # Hybrid 
 ```
 ###HYBRID
-#whatever data download steps from NCBI go here
+#whatever data download to raw_hybrid directory
+mkdir raw_hybrid
 
 
-conda create --name trim-galore
-conda activate trim-galore
-conda install bioconda::trim-galore
+mamba create --name trim-galore
+mamba activate trim-galore
+mamba install bioconda::trim-galore
 
 #combine our two fastq files
 cat raw_hybrid/*.fastq.gz > raw_hybrid/raw_hybrid.fastq.gz
