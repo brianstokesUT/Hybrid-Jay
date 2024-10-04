@@ -3,9 +3,6 @@
 ```
 mamba activate data_prep
 
-#index reference (c_stelleri_au.fasta)
-bowtie2-build raw_sequences/c_stelleri_au.fasta raw_sequences/cs_ref
-
 #align and sort
 bowtie2 --threads 24 -q -x raw_sequences/cs_ref -U prep_hybrid/raw_hybrid_trimmed.fq.gz --no-unal | samtools view -bS > prep_hybrid/hyb.bam
 samtools sort prep_hybrid/hyb.bam -o prep_hybrid/sort.hyb_noname.bam
