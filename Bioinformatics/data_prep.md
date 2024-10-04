@@ -1,13 +1,15 @@
 # Hybrid 
 ```
+mamba activate dataprep
+
+
 ###HYBRID
 #whatever data download to raw_hybrid directory
 mkdir raw_hybrid
 
-
-mamba create --name trim-galore
+mamba deactivate
 mamba activate trim-galore
-mamba install bioconda::trim-galore
+
 
 #combine our two fastq files
 cat raw_hybrid/*.fastq.gz > raw_hybrid/raw_hybrid.fastq.gz
