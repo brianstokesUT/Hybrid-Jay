@@ -2,9 +2,6 @@ mkdir phasing
 
 #Filter the .bam file
 
-
-
-mamba create --name gatk4 gatk4=4.5.0.0
 mamba activate gatk4
 
 gatk HaplotypeCaller -R raw_sequences/c_stelleri_au.fasta -I prep_hybrid/sort.hyb1.bam -O phasing/phase_hyb_JANXIP010000005.1.g.vcf.gz -ERC GVCF --intervals JANXIP010000005.1
@@ -22,7 +19,7 @@ samtools faidx raw_sequences/c_stelleri_au.fasta JANXIP010000005.1 | bcftools co
 
 
 
-candidate_rag1_db
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_JANXIP010000005.1_haplotype1.fasta -db rag1/candidate_rag1_db -out rag1/hap1_rag1_blast.out
+#candidate_rag1_db
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_JANXIP010000005.1_haplotype1.fasta -db rag1/candidate_rag1_db -out rag1/hap1_rag1_blast.out
 
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_JANXIP010000005.1_haplotype2.fasta -db rag1/candidate_rag1_db -out rag1/hap2_rag1_blast.out
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_JANXIP010000005.1_haplotype2.fasta -db rag1/candidate_rag1_db -out rag1/hap2_rag1_blast.out
