@@ -1,13 +1,7 @@
 # Hybrid 
+Retrieval of SRA data by BioProject accession is not supported by NCBI Datasets at this time. Refer to the README.md to download relevant file. These files should be placed into ~PATH/raw_hybird/
 ```
-mamba activate dataprep
 
-
-###HYBRID
-#whatever data download to raw_hybrid directory
-mkdir raw_hybrid
-
-mamba deactivate
 mamba create --name trim-galore
 mamba activate trim-galore
 mamba install bioconda::trim-galore
@@ -19,8 +13,8 @@ cat raw_hybrid/*.fastq.gz > raw_hybrid/raw_hybrid.fastq.gz
 trim_galore raw_hybrid/raw_hybrid.fastq.gz -o prep_hybrid/
 mamba deactivate
 ```
-
-
+# Green Jay
+Retrieval of SRA data by BioProject accession is not supported by NCBI Datasets at this time. Refer to the README.md to download relevant files including BioSample accessions SAMN44062996, SAMN44062997, SAMN44062998, SAMN44062999. Files should be placed into ~PATH/raw_sequences/c_yncas/
 
 
 # data_prep.bash
@@ -50,7 +44,6 @@ unzip raw_sequences/a_californica.zip -d raw_sequences/a_californica
 samtools faidx raw_sequences/a_californica/ncbi_dataset/data/GCA_028536675.1/GCA_028536675.1_bAphCal1.0.hap1_genomic.fna JAQMYR010001393.1 > raw_sequences/a_californica_mt.fasta
 #move A. californica sequences
 cp raw_sequences/a_californica/ncbi_dataset/data/GCA_028536675.1/GCA_028536675.1_bAphCal1.0.hap1_genomic.fna raw_sequences/a_californica_au.fasta
-
 
 ###C. cristata 
 #C. cristata mitochondrial
