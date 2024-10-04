@@ -25,8 +25,7 @@ This repository includes all code necessary to produce results of *INSERT CITATI
      - Code to produce each portion of *FIGURE 2*
 
 
-# Genomic Methods
-##Summary
+# Genomic Methods and Data Sources
 We used WGS data from the hybrid individual to determine paternal ancestry based on BLAST methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal speices.
 
 
