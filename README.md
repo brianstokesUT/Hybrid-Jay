@@ -12,8 +12,16 @@ We found a putative hybrid Green Jay x Blue Jay individual in central Texas duri
 This repository includes all code necessary to produce results of *INSERT CITATION HERE* . The reposity first describes how we determined genetic ancestry and generation of *figure number*. Second we describe the generation of species range maps and associated plots shown in *FIGURE 2*. 
 
 1. Bioinformatics
-   - First nested list item
-     - Second nested list item
+   - README.md
+     - Describes concetual overview of bioinformatic methodology and data sources.
+   - setup.md
+   - dataprep.md
+     - Describes how to download and prepare raw sequence data via command line for mitochondrial and autosomal analyses
+   - Create_Hybrid_Consensus_MT.md
+   - Create_Hybrid_Consensus_AU.md
+   - Create_candidate_MT.md
+   - Create_candidate_AU.md
+   - phasing.md
 2. Range Models
    - README.md
      - described datasources for Range Models
