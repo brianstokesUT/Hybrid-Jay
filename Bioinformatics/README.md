@@ -108,10 +108,9 @@ The table below describe the mitochondrial sequences of *C. cristata* avaiable w
 
 
 ## Green Jay (*Cyanocorax yncas*)Data Generation
-At the time of analysis no *C. yncas* assembly was available on any public repository.
-### *C. yncas* Mitochondrial Data
+We used WGS data from 4 Green Jay samples captured throughout Texas. Samples were sequenced using PE, 150bp, 10x coverage. We aligned these to a Steller's Jay Refernce Genome for comparison with hybrid sequencing data.
 
-### *C. yncas* Autosomal Data
+These four samples are stored in Bioproject [PRJNA1168985: WGS of Green Jay (Cyanocorax yncas) in Texas](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1168985)
 
 
 
