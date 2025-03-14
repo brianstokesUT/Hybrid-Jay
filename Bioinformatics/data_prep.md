@@ -63,10 +63,12 @@ samtools faidx raw_sequences/a_californica/ncbi_dataset/data/GCA_028536675.1/GCA
 cp raw_sequences/a_californica/ncbi_dataset/data/GCA_028536675.1/GCA_028536675.1_bAphCal1.0.hap1_genomic.fna raw_sequences/a_californica_au.fasta
 
 ###C. cristata 
-#C. cristata mitochondrial
-efilter -db nucleotide -query "txid28727[organism:exp] AND mitochondrion[filter]" | efetch -format fasta > raw_sequences/c_cristata_mt.fasta
-#C. cristata autosomal
-efilter -db nucleotide -query "txid28727[organism:exp] NOT mitochondrion[filter]" | efetch -format fasta > raw_sequences/c_cristata_au.fasta
+datasets download genome accession GCA_046129655.1 --include gff3,rna,cds,protein,genome,seq-report --filename raw_sequences/c_cristata.zip
+unzip raw_sequences/c_cristata.zip -d raw_sequences/c_cristata
+#extract C. cristata mitochondrial sequence
+samtools faidx raw_sequences/c_cristata/ncbi_dataset/data/GCA_046129655.1/GCA_046129655.1_bCyaCrs1.hap1_genomic.fna CM100652.1 > raw_sequences/c_cristata_mt.fasta
+#move C. cristata sequences
+cp raw_sequences/c_cristata/ncbi_dataset/data/GCA_046129655.1/GCA_046129655.1_bCyaCrs1.hap1_genomic.fna raw_sequences/c_cristata_au.fasta
 ```
 # Prep C. stelleri to serve as reference genome
 ```
