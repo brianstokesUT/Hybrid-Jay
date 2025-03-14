@@ -48,7 +48,7 @@ We used a *Cyanocitta stelleri* mitochondrion assembly: [Genbank assembly access
 At the time of analysis no *A. woodhousei* sequencing data was available on any public repository. We used a Western Scrub Jay (*Aphelocoma californica*) assembly: [Genome assembly bAphCal1.0.hap1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_028536675.1/) ([DeRaad et al., 2023](https://doi.org/10.1093%2Fjhered%2Fesad047)) from [BioProject PRJNA904314](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA904314/) as representative for both *A. woodhousei* autosomal and mitochondrial genomes.
 
 ## Blue Jay (*Cyanocitta cristata*) Data Generation
-We used a *Cyanocitta cristata* mitochondrion assembly: [Genbank assembly accession #bCyaCrs1.hap1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_046129655.1/) ([Rhie et al., 2021](https://doi.org/10.1038/s41586-021-03451-0)) from [BioProject PRJNA1181931](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1181931/) to represent *C. cristata* autosomal and mitochondrial genomes.
+We used a *Cyanocitta cristata* mitochondrion assembly: [Genbank assembly accession bCyaCrs1.hap1](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_046129655.1/) ([Rhie et al., 2021](https://doi.org/10.1038/s41586-021-03451-0)) from [BioProject PRJNA1181931](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1181931/) to represent *C. cristata* autosomal and mitochondrial genomes.
 
 
 ## Green Jay (*Cyanocorax yncas*)Data Generation
