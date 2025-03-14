@@ -44,8 +44,8 @@ We used WGS data from the hybrid individual to determine paternal ancestry based
 ## Data Generation
 Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found [in NIH BioProject#1114044](http://www.ncbi.nlm.nih.gov/bioproject/1114044)
 
-### Possible Parents
-During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
+### Potential Parents
+During analysis we considered a set of potential sources of parental ancestry from a subset of jay species found in the state of Texas based on range and morphology: 
 + Green Jay (*Cyanocorax yncas*)
 + Blue Jay (*Cyanocitta cristata*)
 + Steller's Jay (*Cyanocitta stelleri*)
