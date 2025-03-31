@@ -54,8 +54,6 @@ cp raw_sequences/*mt.fasta ./mt_blast
 
 ###edit names of c_yncas & c_cristata because we used the c_stelleri refernce to make the fastas
 sed -i '1s/.*/>c_yncas_mt/' mt_blast/c_yncas_mt_FINAL.fasta
-sed -i '1s/.*/>c_cristata_mt/' mt_blast/c_cristata_mt_FINAL.fasta
-
 
 #create our database by combining all fastas into a single fasta
 cat mt_blast/c_yncas_mt_FINAL.fasta mt_blast/c_cristata_mt_FINAL.fasta mt_blast/a_californica_mt.fasta mt_blast/c_stelleri_mt.fasta mt_blast/p_pica_mt.fasta > mt_blast/jayz_mt.fasta
