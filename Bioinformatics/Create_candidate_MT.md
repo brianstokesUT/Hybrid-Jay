@@ -20,41 +20,9 @@ raw_sequences/a_californica_mt.fasta
 Need to work on the raw sequences
 
 
+Leave it as 
 ```
-mamba activate data_prep
-bowtie2-build -f raw_sequences/c_stelleri_mt.fasta raw_sequences/c_stelleri_mt
-samtools faidx raw_sequences/c_stelleri_mt.fasta
-
-bowtie2 --very-sensitive-local -x raw_sequences/c_stelleri_mt -f -U raw_sequences/c_cristata_mt.fasta | samtools view -bS > prep_mt/c_cristata_mt.bam
-
-
-#####################################3
-
-
-samtools sort prep_mt/c_cristata_mt.bam -o prep_mt/sort.c_cristata_mt.bam
-samtools index prep_mt/sort.c_cristata_mt.bam
-
-
-
-########################
-
-bcftools mpileup -Ou -f raw_sequences/c_stelleri_mt.fasta prep_mt/sort.c_cristata_mt.bam | bcftools call -Ou -mv | bcftools norm -f raw_sequences/c_stelleri_mt.fasta -Oz -o prep_mt/c_cristata_mt.vcf.gz
-bcftools index prep_mt/c_cristata_mt.vcf.gz
-
-######################################
-
-
-mamba deactivate
-mamba activate gatk4
-
-gatk CreateSequenceDictionary -R raw_sequences/c_stelleri_mt.fasta
-
-gatk IndexFeatureFile -I prep_mt/c_cristata_mt.vcf.gz
-
-gatk FastaAlternateReferenceMaker -R raw_sequences/c_stelleri_mt.fasta -O c_cristata_mt_FINAL.fasta -V prep_mt/c_cristata_mt.vcf.gz
-
-mamba deactivate
-
+raw_sequences/c_cristata_mt.fasta
 ```
 
 # C. yncas
