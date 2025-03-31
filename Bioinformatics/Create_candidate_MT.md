@@ -17,9 +17,6 @@ raw_sequences/a_californica_mt.fasta
 ```
 
 # C. Cristata
-Need to work on the raw sequences
-
-
 Leave it as 
 ```
 raw_sequences/c_cristata_mt.fasta
