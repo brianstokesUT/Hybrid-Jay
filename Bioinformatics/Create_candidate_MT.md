@@ -60,12 +60,11 @@ cat mt_blast/c_yncas_mt_FINAL.fasta mt_blast/c_cristata_mt.fasta mt_blast/a_cali
 
 #make database
 ~PATH/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in mt_blast/jayz_mt.fasta -out mt_blast/jayz_mt_db -dbtype nucl -title jayz_mt_db
-/tools/ncbi-blast-2.14.0+/bin/makeblastdb -in mt_blast/jayz_mt.fasta -out mt_blast/jayz_mt_db -dbtype nucl -title jayz_mt_db
 ```
 
 # Query database and check results
 ```
-/work/08209/brian97/ls6/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_mt_FINAL.fasta -db mt_blast/jayz_mt_db -out jay_mt_blast.out
+~PATH/tools/ncbi-blast-2.14.0+/bin/blastn -query hyb_mt_FINAL.fasta -db mt_blast/jayz_mt_db -out jay_mt_blast.out
 
 #VIEW RESULTS BY REMOVING "#" IN LINE BELOW
 #nano jay_mt_blast.out
