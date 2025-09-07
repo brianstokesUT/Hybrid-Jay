@@ -3,13 +3,13 @@
 Data should all be downloaded to the same directroy - .R files refer to a ~PATH/ which should be edited to suit your local directory
 
 ## Bioclim Data
-We used Bioclim data from [ADAPTWEST](https://adaptwest.databasin.org/pages/adaptwest-climatena/) because it included the variable "NFFD: the number of frost-free days" which should act as a reasonable proxy Freezing Temperature events which likely have some relation to the winter survival of a tropical species like the Green Jay.
+We used Bioclim data from [ADAPTWEST](https://adaptwest.databasin.org/pages/adaptwest-climatena/) because it included the variable "NFFD: the number of frost-free days" which should act as a reasonable proxy Freezing Temperature events which the authors belive likely has some relation to the winter survival of a tropical species like the Green Jay.
 
 Mahony, C.R., T. Wang, A. Hamann, and A.J. Cannon. 2022. A global climate model ensemble for downscaled monthly climate normals over North America. International Journal of Climatology. 1-21. https://doi.org/10.1002/joc.7566
 
 We specifically downloaded the [33 Bioclim "climate normals" for the period of 1991-2020](https://adaptwest.databasin.org/pages/adaptwest-climatena/#:~:text=1991%2D2020%20period-,zipfile,-zipfile) to represent Current (or recent) enviromental conditions through which range overlap has occured.
 
-We next downloaded the [33 Bioclim "climate normals" projection for the period of 2041-2060](https://s3-us-west-2.amazonaws.com/www.cacpd.org/CMIP6v73/ensembles/ensemble_8GCMs_ssp245_2041_2060_bioclim.zip) This data represents the ensemble mean of 8 CMIP6 AOGCMs for the ssp245 climate pathway, which represents minimal change to current production of carbon. It isconsidered a ["middle of the road" outcome](https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change/). 
+We next downloaded the [33 Bioclim "climate normals" projection for the period of 2041-2060](https://s3-us-west-2.amazonaws.com/www.cacpd.org/CMIP6v73/ensembles/ensemble_8GCMs_ssp245_2041_2060_bioclim.zip) This data represents the ensemble mean of 8 CMIP6 AOGCMs for the ssp245 climate pathway, which represents minimal change to current production of carbon. It is considered a ["middle of the road" outcome](https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change/). 
 
 These data are processed using [bioclim_dataprep.R](https://github.com/brianstokesUT/Hybrid-Jay/blob/main/Range%20Model/bioclim_dataprep.R)
 
