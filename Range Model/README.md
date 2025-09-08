@@ -11,8 +11,7 @@ We specifically downloaded the [33 Bioclim "climate normals" for the period of 1
 
 We next downloaded the [33 Bioclim "climate normals" projection for the period of 2041-2060](https://s3-us-west-2.amazonaws.com/www.cacpd.org/CMIP6v73/ensembles/ensemble_8GCMs_ssp245_2041_2060_bioclim.zip) This data represents the ensemble mean of 8 CMIP6 AOGCMs for the ssp245 climate pathway, which represents minimal change to current production of carbon. It is considered a ["middle of the road" outcome](https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change/). 
 
-These data are processed using [bioclim_dataprep.R](https://github.com/brianstokesUT/Hybrid-Jay/blob/main/Range%20Model/bioclim_dataprep.R)
-
+These data are processed using [bioclim_dataprep.R](https://github.com/brianstokesUT/Hybrid-Jay/blob/main/Range%20Model/bioclim_dataprep.R) which creates the environmental inputs used in [ebird_and_maxent.R]
 
 ## eBird Data
 eBird data products require admin access and can be requested by following directions [at this link](https://science.ebird.org/en/use-ebird-data). 
