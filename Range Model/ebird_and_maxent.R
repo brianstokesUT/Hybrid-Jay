@@ -1,3 +1,7 @@
+# ClimateNA preprocessing (terra-only): current (1991–2020) and future (SSP245 2041–2060)
+# Author: Brian R. Stokes
+# Description: Read, reproject to EPSG:4326, crop, harmonize variable sets, and extract MAT at a point.
+
 wd<-("~/PATH")
 setwd(wd)
 
