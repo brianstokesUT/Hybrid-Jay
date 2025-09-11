@@ -2,8 +2,6 @@
 
 Stokes, B. R., Keitt, T. H. 2025. An intergeneric hybrid between historically isolated temperate and tropical jays following recent range expansion. *Ecology and Evolution*, [https://doi.org/10.1002/ece3.72148](https://doi.org/10.1002/ece3.72148)
 
-<img width="468" height="55" alt="image" src="https://github.com/user-attachments/assets/157b07d1-8d25-4f20-9eab-b38f3c3571e1" />
-
 
 ## Summary
 <p align="center">
