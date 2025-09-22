@@ -1,7 +1,6 @@
-# Hybrid-Jay (*REPLACE WITH PUBLICATION NAME*)
+# Hybrid-Jay: *An Intergeneric Hybrid Between Historically Isolated Temperate and Tropical Jays Following Recent Range Expansion*
 
-Stokes, B. R., Keitt, T. H. 2025. An intergeneric hybrid between historically isolated temperate and tropical jays following recent range expansion. *Ecology and Evolution*, [https://doi.org/10.1002/ece3.72148](https://doi.org/10.1002/ece3.72148)
-
+Stokes, B.R. and Keitt, T.H., 2025. An Intergeneric Hybrid Between Historically Isolated Temperate and Tropical Jays Following Recent Range Expansion. Ecology and Evolution, 15(9), p.e72148. [https://doi.org/10.1002/ece3.72148](https://doi.org/10.1002/ece3.72148)
 
 ## Summary
 <p align="center">
@@ -10,7 +9,7 @@ Stokes, B. R., Keitt, T. H. 2025. An intergeneric hybrid between historically is
 
 We found a putative hybrid Green Jay x Blue Jay individual in central Texas during the Summer of 2023. Using bioinformatic methods we describe how we determined parental ancestry. 
 
-This repository includes all code necessary to produce results of *INSERT CITATION HERE* . The reposity first describes how we determined genetic ancestry and generation of *figure number*. Second we describe the generation of species range maps and associated plots shown in *FIGURE 2*. 
+This repository includes all code necessary to produce results of Stokes, B.R. and Keitt, T.H., 2025. An Intergeneric Hybrid Between Historically Isolated Temperate and Tropical Jays Following Recent Range Expansion. Ecology and Evolution, 15(9), p.e72148. [https://doi.org/10.1002/ece3.72148](https://doi.org/10.1002/ece3.72148) . The reposity first describes how we determined genetic ancestry and the generation of *FIGURE 2*. Secondly we describe the generation of species range maps and associated plots shown in *FIGURE 3*. 
 
 1. Bioinformatics
    - README.md
@@ -33,20 +32,20 @@ This repository includes all code necessary to produce results of *INSERT CITATI
    - bioclim_dataprep.R
      - Preperation of BioClim data for our climate model, some steps may not be necessary if you have a sufficiently powerful computer
    - ebird_and_maxent.R
-     - Preperation of eBird data and production of maxent models for *FIGURE 3*
+     - Preperation of eBird data and production of maxent models for *FIGURE 2*
    - Figures.R
-     - Code to produce each portion of *FIGURE 3*
+     - Code to produce each portion of *FIGURE 2*
 
 
 # Genomic Methods and Data Sources
-We used WGS data from the hybrid individual to determine paternal ancestry based on BLAST methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal speices.
+We used WGS data from the hybrid individual to determine paternal ancestry based on BLAST methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed equally by both maternal and paternal speices.
 
 
 ## Data Generation
 Raw fastq files along with library prep/sequencing details of the putative hybrid invividual can be found [in NIH BioProject#1114044](http://www.ncbi.nlm.nih.gov/bioproject/1114044)
 
-### Potential Parents
-During analysis we considered a set of potential sources of parental ancestry from a subset of jay species found in the state of Texas based on range and morphology: 
+### Possible Parents
+During analysis we considered all possible sources of ancestry within potential jay species found in the state of Texas: 
 + Green Jay (*Cyanocorax yncas*)
 + Blue Jay (*Cyanocitta cristata*)
 + Steller's Jay (*Cyanocitta stelleri*)
