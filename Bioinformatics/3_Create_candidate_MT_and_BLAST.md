@@ -68,4 +68,10 @@ cat mt_blast/c_yncas_mt_FINAL.fasta mt_blast/c_cristata_mt.fasta mt_blast/a_cali
 
 #VIEW RESULTS BY REMOVING "#" IN LINE BELOW
 #nano jay_mt_blast.out
+
+#Get results for manuscript
+~PATHtools/ncbi-blast-2.14.0+/bin/blastn -query hyb_mt_FINAL.fasta -db mt_blast/jayz_mt_db -outfmt "6 qseqid sseqid pident length evalue bitscore" -out mt_blast_output.tsv
+
+awk '{sum[$2]+=$3; count[$2]++} END {for (s in sum) print s, sum[s]/count[s]}' mt_blast_output.tsv > mt_avg_identity_per_scaffold.tsv
+
 ```
