@@ -1,4 +1,4 @@
-# Hybrid-Jay (*REPLACE WITH PUBLICATION NAME*)
+# Hybrid-Jay: *An Intergeneric Hybrid Between Historically Isolated Temperate and Tropical Jays Following Recent Range Expansion*
 
 Stokes, B.R. and Keitt, T.H., 2025. An Intergeneric Hybrid Between Historically Isolated Temperate and Tropical Jays Following Recent Range Expansion. Ecology and Evolution, 15(9), p.e72148. [https://doi.org/10.1002/ece3.72148](https://doi.org/10.1002/ece3.72148)
 
