@@ -7,9 +7,9 @@ Stokes, B.R. and Keitt, T.H., 2025. An Intergeneric Hybrid Between Historically 
   <img src="https://github.com/brianstokesUT/Hybrid-Jay/assets/91159511/e082186b-21ec-4f59-b68e-81bb3b770686" width="250">
 </p>
 
-We found a putative hybrid Green Jay x Blue Jay individual in central Texas during the Summer of 2023. Using bioinformatic methods we desscribe how we determined parental ancestry. 
+We found a putative hybrid Green Jay x Blue Jay individual in central Texas during the Summer of 2023. Using bioinformatic methods we describe how we determined parental ancestry. 
 
-This repository includes all code necessary to produce results of *INSERT CITATION HERE* . The reposity first describes how we determined genetic ancestry and generation of *figure number*. Second we describe the generation of species range maps and associated plots shown in *FIGURE 2*. 
+This repository includes all code necessary to produce results of Stokes, B.R. and Keitt, T.H., 2025. An Intergeneric Hybrid Between Historically Isolated Temperate and Tropical Jays Following Recent Range Expansion. Ecology and Evolution, 15(9), p.e72148. [https://doi.org/10.1002/ece3.72148](https://doi.org/10.1002/ece3.72148) . The reposity first describes how we determined genetic ancestry and the generation of *FIGURE 2*. Secondly we describe the generation of species range maps and associated plots shown in *FIGURE 3*. 
 
 1. Bioinformatics
    - README.md
@@ -38,7 +38,7 @@ This repository includes all code necessary to produce results of *INSERT CITATI
 
 
 # Genomic Methods and Data Sources
-We used WGS data from the hybrid individual to determine paternal ancestry based on BLAST methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed by both maternal and paternal speices.
+We used WGS data from the hybrid individual to determine paternal ancestry based on BLAST methodology. We assumed the majority of mitochondrial sequences were passed down by the hybrid's maternal species while autosomal sequences were passed equally by both maternal and paternal speices.
 
 
 ## Data Generation
