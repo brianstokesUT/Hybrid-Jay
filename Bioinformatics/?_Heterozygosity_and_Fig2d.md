@@ -105,5 +105,74 @@ samtools faidx het/c_monedula_hap2/ncbi_dataset/data/GCA_965178535.1/GCA_9651785
 
 # We have to handle *C_yncas* uniquely becasue its not a reference genome
 ```
+# Reference genome and region
+REF="raw_sequences/c_stelleri_au.fasta"
+REGION="JANXIP010000018.1:6040845-6045687"
+
+# Output directory
+OUTDIR="ACTB"
+mkdir -p $OUTDIR
+
+# Samples
+for SAMPLE in cy01 cy02 cy03 cy04; do
+    echo ">>> Processing $SAMPLE"
+
+    # Add read groups
+    picard AddOrReplaceReadGroups \
+        I=prep_mt/sort.${SAMPLE}.bam \
+        O=prep_mt/sort.${SAMPLE}.withRG.bam \
+        RGID=${SAMPLE} \
+        RGLB=lib1 \
+        RGPL=illumina \
+        RGPU=unit1 \
+        RGSM=${SAMPLE}
+
+    # Index BAM
+    samtools index prep_mt/sort.${SAMPLE}.withRG.bam
+
+    # Call variants in region
+    bcftools mpileup -Ou -f $REF \
+        --regions $REGION \
+        prep_mt/sort.${SAMPLE}.withRG.bam | \
+        bcftools call -Ou -m | \
+        bcftools view -Oz -o $OUTDIR/${SAMPLE}_ACTB_region.vcf.gz
+
+    # Normalize variants
+    bcftools norm -m +any -f $REF \
+        $OUTDIR/${SAMPLE}_ACTB_region.vcf.gz -Oz -o $OUTDIR/${SAMPLE}_ACTB_region_normalized.vcf.gz
+
+    # Index normalized VCF (useful for bcftools query)
+    bcftools index -f $OUTDIR/${SAMPLE}_ACTB_region_normalized.vcf.gz
+
+    # Count variants (sanity check)
+    bcftools +counts $OUTDIR/${SAMPLE}_ACTB_region_normalized.vcf.gz
+
+    # Calculate heterozygosity
+    OUTPUT="${OUTDIR}/${SAMPLE}_heterozygosity_summary.txt"
+    bcftools query -f '%CHROM\t%POS\t%REF\t%ALT\t[%GT]\n' $OUTDIR/${SAMPLE}_ACTB_region_normalized.vcf.gz | \
+    awk 'BEGIN { heterozygous=0; total=0 } 
+    {
+        total++; 
+        if ($5 == "1/0" || $5 == "0/1") {
+            heterozygous++
+        }
+    } 
+    END { 
+        if (total > 0) {
+            heterozygosity = heterozygous / total
+            print "Sample:", "'$SAMPLE'"
+            print "Total sites:", total
+            print "Heterozygous sites:", heterozygous
+            print "Heterozygosity:", heterozygosity
+        } else {
+            print "Sample:", "'$SAMPLE'"
+            print "No variants found in the VCF file"
+        }
+    }' > $OUTPUT
+
+    cat $OUTPUT
+    echo ">>> Finished $SAMPLE"
+    echo
+done
 
 ```
