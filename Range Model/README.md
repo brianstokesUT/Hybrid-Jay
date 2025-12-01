@@ -2,6 +2,16 @@
 
 Data should all be downloaded to the same directroy - .R files refer to a ~PATH/ which should be edited to suit your local directory
 
+## Reproducibility
+
+This project uses renv for dependency management.
+To recreate the software environment:
+```
+install.packages("renv")
+renv::restore()
+```
+See session_info.txt for full version details.
+
 ## Bioclim Data
 We used Bioclim data from [ADAPTWEST](https://adaptwest.databasin.org/pages/adaptwest-climatena/) because it included the variable "NFFD: the number of frost-free days" which should act as a reasonable proxy Freezing Temperature events which likely have some relation to the winter survival of a tropical species like the Green Jay.
 
